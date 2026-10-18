@@ -34,19 +34,6 @@
 // double average = (double)sum / prices.Length;
 // Console.WriteLine($"Сумма: {sum}, Среднее: {average}, Количество товаров дороже 100: {count}");
 
-//пример
-
-// int[] numbers = { 7,-2,15,4,9 };
-// int max= numbers[0];
-
-// for (int i = 1; i<numbers.Length; i++)
-// {
-//     if (numbers[i] > max)
-//     {
-//         max = numbers[i];
-//     }
-// }
-// Console.WriteLine($"Максимальное значение: {max}");
 
 //Задание 3
 
@@ -89,3 +76,113 @@
 // {
 //     Console.WriteLine(n);
 // }
+
+// Задание 5
+// int[] numbers = new int[5];
+// Console.WriteLine("Введите 5 целых чисел: ");
+// for (int i = 0; i < numbers.Length; i++)
+// {
+//     numbers[i] = int.Parse(Console.ReadLine());
+// }
+// Console.WriteLine("В обратном порядке:");
+// for (int i = numbers.Length - 1; i >= 0; i--)
+// {
+//     Console.Write(numbers[i] + " ");
+// }
+// Console.WriteLine();
+// int Count = 0;
+// foreach (int n in numbers)
+// {
+//     if (n % 2 == 0) Count++;
+// }
+// Console.WriteLine($"Чётных: {Count}");
+//
+
+// Задание 6
+// string[] names = { "Анна", "Игорь", "Мария", "Олег", "Ольга" };
+// Console.Write("Введите имя: ");
+// string search = Console.ReadLine();
+// int count = -1;
+// for (int i = 0; i < names.Length; i++)
+// {
+//     if (names[i] == search)
+//     {
+//         count = i;
+//         break;
+//     }
+// }
+// Console.WriteLine(count >= 0 ? $"Позиция: {count}" : "Не найдено");
+
+
+
+
+// Задача7 "Журнал оценок"
+// int[] students_grades = new int[8];
+// Console.WriteLine("Введите 8 оценок от 2 до 5 через Enter:");
+
+// for (int i = 0; i < students_grades.Length; i++)
+// {
+//     Console.Write($"Оценка {i + 1}: ");
+//     int grade = int.Parse(Console.ReadLine());
+
+//     if (grade >= 2 && grade <= 5)
+//     {
+//         students_grades[i] = grade;
+//     }
+//     else
+//     {
+//         Console.WriteLine("Оценка должна быть от 2 до 5");
+//         i--;
+//     }
+// }
+
+// Console.Write("Оценки: ");
+// foreach (int grade in students_grades)
+// {
+//     Console.Write(grade + " ");
+// }
+// Console.WriteLine();
+
+// int sum = 0;
+// foreach (int grade in students_grades) sum += grade;
+// double averageGrade = (double)sum / students_grades.Length;
+// Console.WriteLine($"Средняя оценка: {averageGrade}");
+
+// int max = students_grades[0];
+// int min = students_grades[0];
+// for (int i = 1; i < students_grades.Length; i++)
+// {
+//     if (students_grades[i] > max) max = students_grades[i];
+//     if (students_grades[i] < min) min = students_grades[i];
+// }
+// Console.WriteLine($"Наибольшая оценка: {max}");
+// Console.WriteLine($"Наименьшая оценка: {min}");
+
+// int countOfTwos = 0;
+// int countOfFives = 0;
+// foreach (int grade in students_grades)
+// {
+//     if (grade == 2) countOfTwos++;
+//     if (grade == 5) countOfFives++;
+// }
+// Console.WriteLine($"Двоек: {countOfTwos}");
+// Console.WriteLine($"Пятерок: {countOfFives}");
+
+// if (averageGrade >= 4.5)
+//     Console.WriteLine("Отличник");
+// else if (averageGrade >= 3.5)
+//     Console.WriteLine("Хорошист");
+// else
+//     Console.WriteLine("Есть над чем поработать");
+
+
+// Доп задание
+// int[] arr = { 1, 2, 3, 4, 5, 6 };
+//  for (int i = 0; i < arr.Length / 2; i++)
+//  {
+//      int arrr = arr[i];
+//      arr[i] = arr[arr.Length - 1 - i];
+//      arr[arr.Length - 1 - i] = arrr;
+// }
+// foreach (int j in arr) Console.Write(j + " ");
+// Console.WriteLine();
